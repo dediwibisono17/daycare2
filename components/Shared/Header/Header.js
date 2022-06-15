@@ -1,25 +1,71 @@
 import styles from "./Header.module.scss";
 import { Container } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = (props) => {
+  const router = useRouter();
+
+  let data = [
+    { link: "/", title: "Home" },
+    { link: "/gallery", title: "Gallery" },
+    { link: "/news", title: "News" },
+    { link: "/about-us", title: "About Us" },
+  ];
+  const handleActiveLink = (link) => {
+    if (link !== "/") return router.pathname.includes(link.split("-")[0]);
+    if (router.pathname == "/") return true;
+    return false;
+  };
+
   return (
     <>
       <header className={styles.wrap}>
         <Container>
           <div className={styles["header-left"]}>
             <Link href="/">
-              <a >
-                  <h1>DayCare Indonesia</h1>
+              <a>
+                <h1>DayCare Indonesia</h1>
               </a>
             </Link>
           </div>
           <div className={styles["header-right"]}>
+            {/* <ul className={styles.all}>
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery">
+                  <a>Gallery</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/news">
+                  <a>News</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
+              </li>
+            </ul> */}
+
             <ul>
-              <li>Home</li>
-              <li>Gallery</li>
-              <li>News</li>
-              <li>About us</li>
+              {data.map((list, idx) => (
+                <li
+                  key={idx}
+                  className={
+                    handleActiveLink(list.link) ? styles.active : undefined
+                  }
+                >
+                  <Link href={list.link}>
+                    <a>{list.title}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </Container>

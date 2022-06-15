@@ -3,6 +3,22 @@
     padding: 16px;
     border-radius: 16px;
 }
+
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+}
+
+.button {
+    text-transform: initial !important;
+    font-family: 'Baloo 2', sans-serif;
+    color: white;
+    &:hover {
+        background: #8f9093;
+    }
+}
+
 .all {
     margin: 0;
     padding: 0;
@@ -61,4 +77,15 @@
         margin: 0;
         padding: 16px 32px;
     }
+}
+
+.font-size {
+    padding: 0 16px;
+    span {
+        font-size: 16px;
+    }
+}
+
+.iconmui {
+    min-width: 42px;
 }

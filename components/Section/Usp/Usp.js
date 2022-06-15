@@ -20,7 +20,7 @@ const Usp = (props) => {
               </div>
             </div>
             <div className={styles["usp__desc"]}>
-                <h2>Rumah</h2>
+                <h2 className="color-secondary">Rumah</h2>
                 <p>Rumah yang luas dan memiliki lingkungan yang baik</p>
             </div>
             </div>
@@ -39,7 +39,7 @@ const Usp = (props) => {
               </div>
             </div>
             <div className={styles["usp__desc"]}>
-                <h2>Pengasuh</h2>
+                <h2 className="color-secondary">Pengasuh</h2>
                 <p>Memiliki pengasuh yang sayang dengan anak kecil dan mengayomi</p>
             </div>
             </div>
@@ -58,7 +58,7 @@ const Usp = (props) => {
               </div>
             </div>
             <div className={styles["usp__desc"]}>
-                <h2>Program</h2>
+                <h2 className="color-secondary">Program</h2>
                 <p>Makan 3x sehari, bermain di outdoor pagi hari, , Diajarkan sholat, mendengarkan murotal</p>
             </div>
             </div>

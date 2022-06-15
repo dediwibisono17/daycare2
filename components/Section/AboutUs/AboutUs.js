@@ -1,12 +1,22 @@
 import styles from "./AboutUs.module.scss";
-import { Grid } from "@mui/material";
+import {
+  Button,
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import CardUI from "../../UI/CardUI/CardUI";
+import ButtonUI from "../../UI/ButtonUI/ButtonUI";
+import { Send, Check } from "@mui/icons-material";
 
 const AboutUs = (props) => {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid item sm={4}>
+        <Grid item md={4} xs={12}>
           <CardUI>
             <div className={styles["card-news"]}>
               <img
@@ -17,11 +27,18 @@ const AboutUs = (props) => {
               />
             </div>
             <div className={styles.pad}>
-              <p>Lorem ipsum dolor sit amet</p>
+              <h2 className={`${styles.title} color-secondary`}>
+                Menjaga si Buah Hati
+              </h2>
+              <p>
+                Dolorum sit amet, consec tetuer adipiscing elit nean de commodo
+                ligula eget dolor. Aenean massa tellus. Cume sociis Theme
+                natoque pen tibus et magnis augue. Aenea sum ligula eget.
+              </p>
             </div>
           </CardUI>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item md={4} xs={12}>
           <CardUI>
             <div className={styles["card-news"]}>
               <img
@@ -32,22 +49,29 @@ const AboutUs = (props) => {
               />
             </div>
             <div className={styles.check}>
-              <ul className={styles['check__ul']}>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-                <li>Working Mom</li>
-              </ul>
+              <List>
+                <ListItem className={styles["font-size"]}>
+                  <ListItemIcon className={styles.iconmui}>
+                    <Check color="primary"></Check>
+                  </ListItemIcon>
+                  <ListItemText primary="Makan 3x Sehari"></ListItemText>
+                </ListItem>
+                <ListItem className={styles["font-size"]}>
+                  <ListItemIcon className={styles.iconmui}>
+                    <Check color="primary"></Check>
+                  </ListItemIcon>
+                  <ListItemText primary="Single-line item"></ListItemText>
+                </ListItem>
+              </List>
             </div>
           </CardUI>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item md={4} xs={12}>
           <CardUI>
             <div className={styles.wrap}>
-              <h2 className={styles.title}>Working Hours</h2>
+              <h2 className={`${styles.title} color-secondary`}>
+                Working Hours
+              </h2>
               <p>Lorem ipsum dolor sit amet</p>
               <ul className={styles.all}>
                 <li>
@@ -76,6 +100,14 @@ const AboutUs = (props) => {
                   <span className={`${styles.hour} bold`}>07.00 - 18.00</span>
                 </li>
               </ul>
+              <ButtonUI
+                variant="contained"
+                color="primary"
+                customClass={styles.button}
+                endIconMaterial={<Send />}
+              >
+                Hubungi Kami
+              </ButtonUI>
             </div>
           </CardUI>
         </Grid>
