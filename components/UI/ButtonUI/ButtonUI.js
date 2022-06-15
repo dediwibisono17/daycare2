@@ -8,7 +8,7 @@ const ButtonUI = (props) => {
     <Button
       variant={variant}
       color={color}
-      className={`${customClass}`}
+      className={customClass}
       endIcon={endIconMaterial}
       startIcon={startIconMaterial}
     //   endIcon={<SendIcon />}
