@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@300&display=swap');
+// @font-face {
+//   font-family: "Baloo";
+//   // src: url('fonts/Baloo.woff2');
+//   src: local('Baloo');
+//   src: url('Baloo.woff2') format('woff2');
+// }
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Baloo 2', sans-serif
+}
+
+.bold {
+  font-family: 'Baloo 2', sans-serif
+}
+
+p,li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba($color: #000000, $alpha: .7);
 }
 
 a {

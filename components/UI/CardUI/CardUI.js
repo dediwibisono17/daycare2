@@ -5,8 +5,8 @@ const CardUI = (props) =>{
     const {children, variant} = props;
 
     return(
-        // <div className={styles['card']}>
-        <div className={`${styles.card} ${variant === "news" ? `${styles.news}` : `${styles.working}`}`}>
+        //<div className={`${styles.card} ${variant === "news" ? `${styles.news}` : `${styles.working}`}`}>
+        <div className={styles['card']}>
             {children}
         </div>
     )

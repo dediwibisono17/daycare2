@@ -1,18 +1,16 @@
-import News from "../components/Section/News/News";
 import { Container } from "@mui/system";
-import Hero from "../components/Section/Hero/Hero";
 import ButtonUI from "../components/UI/ButtonUI/ButtonUI";
-import AboutUs from "../components/Section/AboutUs/AboutUs";
+import Header from "../components/Shared/Header/Header";
+import Homepage from "../views/Home/Homepage";
 
 export default function Home() {
   return (
     <>
+      <Header></Header>
       <Container>
-        <Hero></Hero>
         <h1>Homepage</h1>
+        <Homepage></Homepage>
         <ButtonUI>Test</ButtonUI>
-        <AboutUs></AboutUs>
-        <News variant="news"></News>
       </Container>
     </>
   )

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+.wrap {
+    background: azure;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header {
+    display: block;
+    clear: both;
+    &-left {
+        // display: inline-block;
+        float: left;
+    }
+    &-right {
+        // display: inline-block;
+        // text-align: right;
+        float: right;
+        ul {
+            display: block;
+            li {
+                display: inline-block;
+                margin-left: 24px;
+                list-style-type: none;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: 'Baloo 2' !important;
+            }
+        }
+    }
+}

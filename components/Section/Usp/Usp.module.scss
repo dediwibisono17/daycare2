@@ -1,0 +1,54 @@
+.bold {
+    font-weight: bold;
+}
+
+.mtop {
+    margin: 42px 0;
+}
+
+.usp {
+    display: block;
+    &__img {
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        position: relative;
+        z-index: 9;
+        .top {
+            position: relative;
+            z-index:  12;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__desc {
+        display: inline-block;
+        width: 65%;
+        margin-left: 8px;
+        vertical-align: top;
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        p {
+            margin-top: 0;
+        }
+    }
+}
+
+.help-bola {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    // #ff6f96;
+    // #fcf4eb
+    background: #f1e5d6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}

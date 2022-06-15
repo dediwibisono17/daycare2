@@ -1,17 +1,17 @@
-import CardUI from "../../UI/CardUI/CardUI"
+import CardCondition from "../../UI/CardCondition/CardCondition"
 
 const News = (props) =>{
     return (
         <>
-            <CardUI variant="news">
+            <CardCondition variant="news">
                 <h2>Ini News</h2>
                 <p>desc</p>
-            </CardUI>
+            </CardCondition>
 
-            <CardUI variant="working">
+            <CardCondition variant="working">
                 <h2>Ini News</h2>
                 <p>desc</p>
-            </CardUI>
+            </CardCondition>
         </>
     )
 }
