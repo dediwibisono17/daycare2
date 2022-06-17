@@ -23,7 +23,6 @@ const AboutUsCard = (props) => {
     workingTitle,
     workingDesc,
     workingHari,
-    workingJam,
   } = props;
   return (
     <>
