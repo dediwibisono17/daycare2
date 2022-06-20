@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@300&display=swap");
 // @font-face {
 //   font-family: "Baloo";
 //   // src: url('fonts/Baloo.woff2');
@@ -7,10 +7,10 @@
 // }
 
 $primary: #ff6f96;
-$second:#32355d;
+$second: #32355d;
 $third: #f5fbfb;
 
-.color{
+.color {
   &-primary {
     color: $primary;
   }
@@ -19,7 +19,7 @@ $third: #f5fbfb;
   }
 }
 
-.font{
+.font {
   &-big {
     font-size: 82px;
   }
@@ -29,7 +29,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: "Baloo 2", sans-serif;
   overflow-x: hidden;
 }
 
@@ -37,14 +37,15 @@ body {
 //   font-family: 'Baloo 2', sans-serif
 // }
 
-p,li {
-  font-family: 'Poppins', sans-serif;
+p,
+li {
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: rgba($color: #000000, $alpha: .7);
+  color: rgba($color: #000000, $alpha: 0.7);
 }
 
 li {
-  color: rgba($color: #000000, $alpha: .8);
+  color: rgba($color: #000000, $alpha: 0.8);
 }
 
 a {

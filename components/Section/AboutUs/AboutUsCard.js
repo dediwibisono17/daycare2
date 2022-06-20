@@ -58,12 +58,13 @@ const AboutUsCard = (props) => {
               </div>
               <div className={styles.check}>
                 <List>
-                  <ListItem className={styles["font-size"]}>
+                  {checkpointPoint}
+                  {/* <ListItem className={styles["font-size"]}>
                     <ListItemIcon className={styles.iconmui}>
                       <Check color="primary"></Check>
                     </ListItemIcon>
                     <ListItemText primary={checkpointPoint}></ListItemText>
-                  </ListItem>
+                  </ListItem> */}
                 </List>
               </div>
             </CardUI>

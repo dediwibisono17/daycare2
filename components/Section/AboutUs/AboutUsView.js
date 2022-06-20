@@ -2,12 +2,14 @@ import React from "react";
 import AboutUsCard from "./AboutUsCard";
 import data from "./dataAbout";
 import styles from "./AboutUs.module.scss";
+import { ListItem, ListItemText, ListItemIcon } from "@mui/material";
+import { Check } from "@mui/icons-material";
 
 export default function AboutUsView() {
   return (
     <>
       {data.map((list, key) => {
-        console.log(list);
+        // console.log(list.checkpoint.point);
         return (
           <AboutUsCard
             key={key}
@@ -16,7 +18,15 @@ export default function AboutUsView() {
             articleDesc={list.article.desc}
             checkpointImg={list.checkpoint.img}
             checkpointPoint={list.checkpoint.point.map((a, i) => {
-              return a;
+              //return <ListItemText key={i}>{a}</ListItemText>;
+              return (
+                <ListItem key={i} className={styles["font-size"]}>
+                  <ListItemIcon className={styles.iconmui}>
+                    <Check color="primary"></Check>
+                  </ListItemIcon>
+                  <ListItemText primary={a}></ListItemText>
+                </ListItem>
+              );
             })}
             workingTitle={list.working.title}
             workingDesc={list.working.desc}

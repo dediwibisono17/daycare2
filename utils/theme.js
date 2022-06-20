@@ -25,19 +25,19 @@ const base = createTheme({
     fontFamily: "Baloo 2, Arial",
     fontSize: 16,
   },
-//   components: {
-//     MuiCssBaseline: {
-//       styleOverrides: `
-//             @font-face {
-//               font-family: 'Baloo';
-//               font-style: normal;
-//               font-display: swap;
-//               font-weight: 400;
-//               src: local('Baloo'), local('Baloo'), url(${Baloo}) format('woff2');
-//             }
-//           `,
-//     },
-//   },
+  //   components: {
+  //     MuiCssBaseline: {
+  //       styleOverrides: `
+  //             @font-face {
+  //               font-family: 'Baloo';
+  //               font-style: normal;
+  //               font-display: swap;
+  //               font-weight: 400;
+  //               src: local('Baloo'), local('Baloo'), url(${Baloo}) format('woff2');
+  //             }
+  //           `,
+  //     },
+  //   },
 });
 
 const theme = responsiveFontSizes(base);

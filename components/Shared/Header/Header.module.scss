@@ -1,48 +1,61 @@
 // @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
 
 .wrap {
-    background: azure;
-    height: 70px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 999;
+  background: azure;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.titleLogo {
+  padding: 8px 0;
+  margin: 0;
+  font-size: 32px;
+  color: #32355d;
+  //   line-height: 16px;
 }
 
 .header {
-    display: block;
-    clear: both;
-    &-left {
-        // display: inline-block;
-        float: left;
-    }
-    &-right {
-        // display: inline-block;
-        // text-align: right;
-        float: right;
-        ul {
-            display: block;
-            li {
-                display: inline-block;
-                margin-left: 24px;
-                list-style-type: none;
-                font-size: 18px;
-                font-weight: bold;
-                font-family: 'Baloo 2' !important;
-                &.active {
-                    a {
-                        color: #ff6f96;
-                        border-bottom: 2px solid;
-                    }
-                }
-                a {
-                    transition: .3s;
-                    &:hover {
-                        color: #ff6f96;
-                    }
-                }
-            }
+  display: block;
+  clear: both;
+  &-left {
+    // display: inline-block;
+    float: left;
+  }
+  &-right {
+    // display: inline-block;
+    // text-align: right;
+    float: right;
+    ul {
+      display: block;
+      li {
+        display: inline-block;
+        margin-left: 24px;
+        list-style-type: none;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Baloo 2" !important;
+        &.active {
+          a {
+            color: #ff6f96;
+            border-bottom: 2px solid;
+          }
         }
+        a {
+          transition: 0.3s;
+          &:hover {
+            color: #ff6f96;
+          }
+        }
+      }
     }
+  }
 }

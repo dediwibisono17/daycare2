@@ -25,7 +25,13 @@ const Header = (props) => {
           <div className={styles["header-left"]}>
             <Link href="/">
               <a>
-                <h1>DayCare Indonesia</h1>
+                {/* <img
+                  src="https://pbs.twimg.com/profile_images/1141751703923904512/Iov7a9tk_400x400.jpg"
+                  alt=""
+                  title=""
+                  className={styles.logo}
+                /> */}
+                <h1 className={styles.titleLogo}>DayCare Indonesia</h1>
               </a>
             </Link>
           </div>
