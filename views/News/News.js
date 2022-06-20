@@ -43,24 +43,18 @@ const News = (props) => {
                     const linked = linkHelp + slug;
                     return (
                       <Grid key={key} item md={4}>
-                        <div className={styles.wrap}>
-                          <CardUI variant={styles.padd}>
-                            <div className={styles.content}>{list.title}</div>
-                            <p>{list.body}</p>
-                            <Link href={linked}>
-                              <a>
-                                <ButtonUI
-                                  variant="contained"
-                                  color="primary"
-                                  customClass={styles.button}
-                                  endIconMaterial={<Send />}
-                                >
-                                  Link
-                                </ButtonUI>
-                              </a>
-                            </Link>
-                          </CardUI>
-                        </div>
+                        <Link href={linked}>
+                          <a>
+                            <div className={styles.wrap}>
+                              <CardUI variant={styles.padd}>
+                                <div className={styles.content}>
+                                  {list.title}
+                                </div>
+                                <p>{list.body}</p>
+                              </CardUI>
+                            </div>
+                          </a>
+                        </Link>
                       </Grid>
                     );
                   })}
