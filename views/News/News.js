@@ -48,7 +48,16 @@ const News = (props) => {
                             <div className={styles.content}>{list.title}</div>
                             <p>{list.body}</p>
                             <Link href={linked}>
-                              <a>Link</a>
+                              <a>
+                                <ButtonUI
+                                  variant="contained"
+                                  color="primary"
+                                  customClass={styles.button}
+                                  endIconMaterial={<Send />}
+                                >
+                                  Link
+                                </ButtonUI>
+                              </a>
                             </Link>
                           </CardUI>
                         </div>

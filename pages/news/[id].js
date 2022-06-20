@@ -8,7 +8,7 @@ export default function IdPage(props) {
   const { id } = router.query;
   // console.log(props);
 
-  const helpSlug = id.split("-").join(" ").toUpperCase();
+  const helpSlug = id?.split("-").join(" ").toUpperCase();
 
   return (
     <>
