@@ -49,22 +49,7 @@ const Header = (props) => {
 
             <Drawer anchor="left" open={isDrawerOpen} onClose={closeBar}>
               <h2>DayCare Indonesia</h2>
-              <ul>
-                {data.map((list, key) => {
-                  return (
-                    <li
-                      key={key}
-                      className={
-                        handleActiveLink(list.link) ? styles.active : undefined
-                      }
-                    >
-                      <Link href={list.link}>
-                        <a>{list.title}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+              <HeaderMenu></HeaderMenu>
             </Drawer>
 
             <div className={styles.isdesktop}>

@@ -1,15 +1,18 @@
-import styles from './CardUI.module.scss';
+import styles from "./CardUI.module.scss";
 
-const CardUI = (props) =>{
+const CardUI = (props) => {
+  const { children, variant } = props;
 
-    const {children, variant} = props;
+  return (
+    //<div className={`${styles.card} ${variant === "news" ? `${styles.news}` : `${styles.working}`}`}>
+    <div
+      className={`${styles["card"]} ${
+        variant !== undefined ? `${variant}` : ""
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
 
-    return(
-        //<div className={`${styles.card} ${variant === "news" ? `${styles.news}` : `${styles.working}`}`}>
-        <div className={`${styles['card']} ${variant !== undefined ? `${variant}` : ""}`}>
-            {children}
-        </div>
-    )
-}
-
-export default CardUI
+export default CardUI;

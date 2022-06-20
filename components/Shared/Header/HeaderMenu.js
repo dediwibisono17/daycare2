@@ -6,11 +6,6 @@ import styles from "./Header.module.scss";
 
 export default function HeaderMenu() {
   const router = useRouter();
-  console.log(
-    data.map((list) => {
-      return list;
-    })
-  );
   const handleActiveLink = (link) => {
     if (link !== "/") return router.pathname.includes(link.split("-")[0]);
     if (router.pathname == "/") return true;
