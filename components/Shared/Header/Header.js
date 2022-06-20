@@ -1,21 +1,26 @@
 import styles from "./Header.module.scss";
-import { Container } from "@mui/material";
+import { Container, Drawer } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import data from "../../Shared/menu.js";
+import HeaderMenu from "./HeaderMenu";
 
 const Header = (props) => {
   const router = useRouter();
 
-  let data = [
-    { link: "/", title: "Home" },
-    { link: "/gallery", title: "Gallery" },
-    { link: "/news", title: "News" },
-    { link: "/about-us", title: "About Us" },
-  ];
   const handleActiveLink = (link) => {
     if (link !== "/") return router.pathname.includes(link.split("-")[0]);
     if (router.pathname == "/") return true;
     return false;
+  };
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const barFunction = () => {
+    setIsDrawerOpen(true);
+  };
+  const closeBar = () => {
+    setIsDrawerOpen(false);
   };
 
   return (
@@ -25,54 +30,46 @@ const Header = (props) => {
           <div className={styles["header-left"]}>
             <Link href="/">
               <a>
-                {/* <img
+                <img
                   src="https://pbs.twimg.com/profile_images/1141751703923904512/Iov7a9tk_400x400.jpg"
                   alt=""
                   title=""
                   className={styles.logo}
-                /> */}
+                />
                 <h1 className={styles.titleLogo}>DayCare Indonesia</h1>
               </a>
             </Link>
           </div>
           <div className={styles["header-right"]}>
-            {/* <ul className={styles.all}>
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery">
-                  <a>Gallery</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/news">
-                  <a>News</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
-              </li>
-            </ul> */}
+            <div className={styles.bar} onClick={barFunction}>
+              <div className={styles["bar-bar"]}></div>
+              <div className={styles["bar-bar"]}></div>
+              <div className={styles["bar-bar"]}></div>
+            </div>
 
-            <ul>
-              {data.map((list, idx) => (
-                <li
-                  key={idx}
-                  className={
-                    handleActiveLink(list.link) ? styles.active : undefined
-                  }
-                >
-                  <Link href={list.link}>
-                    <a>{list.title}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Drawer anchor="left" open={isDrawerOpen} onClose={closeBar}>
+              <h2>DayCare Indonesia</h2>
+              <ul>
+                {data.map((list, key) => {
+                  return (
+                    <li
+                      key={key}
+                      className={
+                        handleActiveLink(list.link) ? styles.active : undefined
+                      }
+                    >
+                      <Link href={list.link}>
+                        <a>{list.title}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </Drawer>
+
+            <div className={styles.isdesktop}>
+              <HeaderMenu></HeaderMenu>
+            </div>
           </div>
         </Container>
       </header>
