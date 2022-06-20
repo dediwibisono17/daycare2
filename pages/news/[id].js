@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Header from "../../components/Shared/Header/Header";
+import { Container } from "@mui/material";
+import styles from "./help.module.scss";
 
 export default function IdPage(props) {
   //buat dynamic route
@@ -13,8 +15,11 @@ export default function IdPage(props) {
   return (
     <>
       <Header></Header>
-      <h1>Detail News</h1>
-      {helpSlug}
+      <div className={styles.wrap}>
+        <Container>
+          <h1 className="text-center">{helpSlug}</h1>
+        </Container>
+      </div>
     </>
   );
 }

@@ -16,7 +16,7 @@ const News = (props) => {
     "https://jsonplaceholder.typicode.com/posts",
     fetcher
   );
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <Container>
@@ -49,8 +49,6 @@ const News = (props) => {
                             <p>{list.body}</p>
                             <Link href={linked}>
                               <a>
-                                {" "}
-                                lala
                                 <ButtonUI
                                   variant="contained"
                                   color="primary"
