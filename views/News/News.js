@@ -49,6 +49,8 @@ const News = (props) => {
                             <p>{list.body}</p>
                             <Link href={linked}>
                               <a>
+                                {" "}
+                                lala
                                 <ButtonUI
                                   variant="contained"
                                   color="primary"
