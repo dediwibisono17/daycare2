@@ -22,9 +22,9 @@ const News = (props) => {
       <Container>
         <div className={styles.newsall}>
           <h1 className="text-center">Semua Berita</h1>
-          <Link href="/news/haha">
+          {/* <Link href="/news/haha">
             <a>Link</a>
-          </Link>
+          </Link> */}
           <Grid container>
             <Grid container spacing={2}>
               {!data
@@ -42,6 +42,13 @@ const News = (props) => {
                     const slug = title_.replace(/\s+/g, "-").toLowerCase();
                     const linkHelp = "/news/";
                     const linked = linkHelp + id_;
+
+                    const handleDesc = (text, maxLength) => {
+                      if (text.length > maxLength)
+                        return `${text.substr(0, maxLength)}...`;
+                      return text;
+                    };
+
                     return (
                       <Grid key={key} item md={4}>
                         <Link href={linked}>
@@ -51,7 +58,8 @@ const News = (props) => {
                                 <div className={styles.content}>
                                   {list.name}
                                 </div>
-                                <p>{list.body}</p>
+
+                                <p>{handleDesc(list.body, 80)}</p>
                               </CardUI>
                             </div>
                           </a>

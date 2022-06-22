@@ -4,15 +4,17 @@ import data from "../../Shared/menu.js";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 
-export default function HeaderMenu() {
+export default function HeaderMenu(props) {
   const router = useRouter();
   const handleActiveLink = (link) => {
     if (link !== "/") return router.pathname.includes(link.split("-")[0]);
     if (router.pathname == "/") return true;
     return false;
   };
+
+  const { variant } = props;
   return (
-    <ul>
+    <ul className={variant !== undefined ? variant : ""}>
       {data.map((list, idx) => (
         <li
           key={idx}

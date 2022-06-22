@@ -48,8 +48,8 @@ const Header = (props) => {
             </div>
 
             <Drawer anchor="left" open={isDrawerOpen} onClose={closeBar}>
-              <h2>DayCare Indonesia</h2>
-              <HeaderMenu></HeaderMenu>
+              <h2 className={styles.h2}>DayCare Indonesia</h2>
+              <HeaderMenu variant={styles.mobile}></HeaderMenu>
             </Drawer>
 
             <div className={styles.isdesktop}>
