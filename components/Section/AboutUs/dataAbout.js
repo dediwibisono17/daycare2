@@ -7,7 +7,14 @@ const data = [
     },
     checkpoint: {
       img: "https://lilo.qodeinteractive.com/wp-content/uploads/2018/04/h1-single-img-2.png",
-      point: ["Makan 3x Sehari", "Snack 2x Sehari", "Berjemur di pagi hari"],
+      point: [
+        "Makan 3x Sehari",
+        "Snack 2x Sehari",
+        "Berjemur di pagi hari",
+        "Mengasah Motorik Anak",
+        "Tidur Siang",
+        "Belajar Sholat",
+      ],
     },
     working: {
       title: "Jam Penitipan",
@@ -22,20 +29,20 @@ const data = [
           jam: "07.00-18.00",
         },
         {
-            name: "Rabu",
-            jam: "07.00-18.00",
-          },
-          {
-            name: "Kamis",
-            jam: "07.00-18.00",
-          },
-          {
-            name: "Jumat",
-            jam: "07.00-18.00",
-          }
+          name: "Rabu",
+          jam: "07.00-18.00",
+        },
+        {
+          name: "Kamis",
+          jam: "07.00-18.00",
+        },
+        {
+          name: "Jumat",
+          jam: "07.00-18.00",
+        },
       ],
     },
   },
 ];
 
-export default data
+export default data;

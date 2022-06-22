@@ -8,6 +8,7 @@ const Hero = (props) => {
   var settings = {
     dots: true,
     infinite: true,
+    autoplay: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -21,6 +22,7 @@ const Hero = (props) => {
             title=""
             alt=""
           />
+          <h2>Bermain Sambil Belajar</h2>
         </div>
         <div className={styles.img}>
           <img
@@ -28,6 +30,7 @@ const Hero = (props) => {
             title=""
             alt=""
           />
+          <h2>Tertawa Sambil Belajar</h2>
         </div>
       </Slider>
     </>

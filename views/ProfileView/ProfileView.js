@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "../../components/Section/Profile/Profile";
+import Footer from "../../components/Shared/Footer/Footer";
 import Header from "../../components/Shared/Header/Header";
 
 function ProfileView() {
@@ -7,6 +8,7 @@ function ProfileView() {
     <>
       <Header></Header>
       <Profile></Profile>
+      <Footer></Footer>
     </>
   );
 }

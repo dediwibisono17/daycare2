@@ -4,6 +4,7 @@ import Header from "../../components/Shared/Header/Header";
 import { Container, Grid, Skeleton } from "@mui/material";
 import styles from "./help.module.scss";
 import useSWR from "swr";
+import Footer from "../../components/Shared/Footer/Footer";
 
 async function fetcher(url) {
   const res = await fetch(url);
@@ -52,6 +53,7 @@ export default function IdPage(props) {
               })}
         </Container>
       </div>
+      <Footer></Footer>
     </>
   );
 }

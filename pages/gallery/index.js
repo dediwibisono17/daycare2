@@ -5,12 +5,8 @@ import styles from "./galleryPage.module.scss";
 const galleryPage = (props) => {
   return (
     <>
-      <Container>
-        <div className={styles.wrap}>
-          <h1 className="text-center">Gallery Dummy</h1>
-          <Gallery></Gallery>
-        </div>
-      </Container>
+      <h1 className="text-center">Gallery Dummy</h1>
+      <Gallery></Gallery>
     </>
   );
 };
