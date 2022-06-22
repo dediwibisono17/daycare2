@@ -13,7 +13,7 @@ async function fetcher(url) {
 }
 const News = (props) => {
   const { data, error } = useSWR(
-    "https://jsonplaceholder.typicode.com/comments",
+    "https://jsonplaceholder.typicode.com/comments?_start=0&_limit=18",
     fetcher
   );
   // console.log(data);
