@@ -7,7 +7,7 @@ const galleryPage = (props) => {
     <>
       <Container>
         <div className={styles.wrap}>
-          <h1 className="text-center">Gallery Name</h1>
+          <h1 className="text-center">Gallery Dummy</h1>
           <Gallery></Gallery>
         </div>
       </Container>

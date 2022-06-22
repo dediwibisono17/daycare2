@@ -13,7 +13,7 @@ async function fetcher(url) {
 }
 const News = (props) => {
   const { data, error } = useSWR(
-    "https://jsonplaceholder.typicode.com/posts",
+    "https://jsonplaceholder.typicode.com/comments",
     fetcher
   );
   // console.log(data);
@@ -37,10 +37,11 @@ const News = (props) => {
                     );
                   })
                 : data.map((list, key) => {
-                    const title_ = list.title;
+                    const id_ = list.id;
+                    const title_ = list.name;
                     const slug = title_.replace(/\s+/g, "-").toLowerCase();
                     const linkHelp = "/news/";
-                    const linked = linkHelp + slug;
+                    const linked = linkHelp + id_;
                     return (
                       <Grid key={key} item md={4}>
                         <Link href={linked}>
@@ -48,7 +49,7 @@ const News = (props) => {
                             <div className={styles.wrap}>
                               <CardUI variant={styles.padd}>
                                 <div className={styles.content}>
-                                  {list.title}
+                                  {list.name}
                                 </div>
                                 <p>{list.body}</p>
                               </CardUI>

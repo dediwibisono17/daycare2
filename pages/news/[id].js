@@ -1,15 +1,28 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Header from "../../components/Shared/Header/Header";
-import { Container } from "@mui/material";
+import { Container, Grid, Skeleton } from "@mui/material";
 import styles from "./help.module.scss";
+import useSWR from "swr";
 
+async function fetcher(url) {
+  const res = await fetch(url);
+  const json = await res.json();
+  return json;
+}
 export default function IdPage(props) {
   //buat dynamic route
   const router = useRouter();
   const { id } = router.query;
-  // console.log(props);
 
+  const { data, error } = useSWR(
+    `https://jsonplaceholder.typicode.com/comments?id=${id}`,
+    fetcher
+  );
+  // console.log(data);
+  const backButton = () => {
+    history.back();
+  };
   const helpSlug = id?.split("-").join(" ").toUpperCase();
 
   return (
@@ -17,7 +30,26 @@ export default function IdPage(props) {
       <Header></Header>
       <div className={styles.wrap}>
         <Container>
-          <h1 className="text-center">{helpSlug}</h1>
+          <div onClick={backButton} className={styles.pointer}>
+            Back
+          </div>
+          {!data
+            ? [1, 2].map((data) => {
+                // key pake data untuk looping
+                return (
+                  <Grid item md={12} key={data}>
+                    <Skeleton variant="rectangular" height={200} />
+                  </Grid>
+                );
+              })
+            : data.map((list, key) => {
+                return (
+                  <div key={key}>
+                    <h1 className="text-center">{list.name}</h1>
+                    <p>{list.body}</p>
+                  </div>
+                );
+              })}
         </Container>
       </div>
     </>

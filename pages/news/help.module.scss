@@ -1,3 +1,11 @@
 .wrap {
   margin: 72px 0;
 }
+
+.pointer {
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: #ff6f96;
+  }
+}
