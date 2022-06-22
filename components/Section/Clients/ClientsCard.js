@@ -8,7 +8,7 @@ export default function Clients(props) {
   const { bundaName, description, jobs } = props;
   return (
     <>
-      <Grid item md={4}>
+      <Grid item md={4} xs={6}>
         <CardUI variant={styles.noshadow}>
           <div className={`${styles.quotes} ${styles.blue}`}>
             <FormatQuoteIcon

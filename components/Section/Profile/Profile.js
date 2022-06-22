@@ -43,7 +43,7 @@ const Profile = (props) => {
                 })
               : data.results.map((list, key) => {
                   return (
-                    <Grid item md={4} key={data}>
+                    <Grid item md={4} xs={6} key={data}>
                       <CardUI>
                         <div className={styles.profile}>
                           <h2 className={styles.h2}>{list.name}</h2>

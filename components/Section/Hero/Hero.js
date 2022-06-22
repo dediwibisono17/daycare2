@@ -26,7 +26,7 @@ const Hero = (props) => {
         </div>
         <div className={styles.img}>
           <img
-            src="https://lilo.qodeinteractive.com/wp-content/uploads/2018/05/h1-slider-backround-1.jpg"
+            src="https://lilo.qodeinteractive.com/wp-content/uploads/2018/05/h1-slider-backround-3.jpg"
             title=""
             alt=""
           />

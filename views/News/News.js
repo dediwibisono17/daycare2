@@ -50,7 +50,7 @@ const News = (props) => {
                     };
 
                     return (
-                      <Grid key={key} item md={4}>
+                      <Grid key={key} item md={4} xs={6}>
                         <Link href={linked}>
                           <a>
                             <div className={styles.wrap}>
