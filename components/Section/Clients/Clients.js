@@ -21,6 +21,10 @@ export default function Clients() {
     <>
       <div className={styles.wrap}>
         <Container>
+          <h2 className="font-big text-center color-primary line-height">
+            Rp1,5 Juta / bulan
+          </h2>
+          <br />
           <h2 className="text-center">Testimoni Bunda</h2>
           {/* {data.map((list, key) => {
             return <p key={key}>{list.name}</p>;
