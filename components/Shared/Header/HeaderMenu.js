@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import data from "../../Shared/menu.js";
+import { data } from "../../Shared/menu.js";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 
