@@ -1,12 +1,12 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 const MyDocument = () => {
   return (
     <Html>
-      <Head lang='eng'>
+      <Head lang="eng">
         {/* for add fivicon */}
-        
+        {/* <title>Daycare Indonesia - Rumah Kedua untuk Buah Hati Tercinta</title> */}
       </Head>
       <body>
         <Main />
@@ -14,6 +14,6 @@ const MyDocument = () => {
       </body>
     </Html>
   );
-}
+};
 
 export default MyDocument;

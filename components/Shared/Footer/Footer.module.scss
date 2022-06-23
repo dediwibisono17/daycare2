@@ -19,7 +19,7 @@
   list-style-type: none;
   li {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     a {
       transition: 0.3s;
       &:hover {
@@ -36,5 +36,6 @@
     margin-left: 8px;
     font-size: 16px;
     display: inline-block;
+    font-family: "Poppins";
   }
 }

@@ -32,9 +32,9 @@ const Header = (props) => {
             <Link href="/">
               <a>
                 <img
-                  src="https://pbs.twimg.com/profile_images/1141751703923904512/Iov7a9tk_400x400.jpg"
-                  alt=""
-                  title=""
+                  src="../../../logo.png"
+                  alt="logo"
+                  title="logo"
                   className={styles.logo}
                 />
                 <h1 className={styles.titleLogo}>DayCare Indonesia</h1>
