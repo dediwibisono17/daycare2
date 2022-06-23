@@ -22,6 +22,9 @@ const News = (props) => {
       <Container>
         <div className={styles.newsall}>
           <h1 className="text-center">Semua Berita</h1>
+          <p className="text-center">
+            <strong>Klik Untuk melihat detail Berita</strong>
+          </p>
           {/* <Link href="/news/haha">
             <a>Link</a>
           </Link> */}
