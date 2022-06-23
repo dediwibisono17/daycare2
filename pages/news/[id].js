@@ -5,6 +5,7 @@ import { Container, Grid, Skeleton } from "@mui/material";
 import styles from "./help.module.scss";
 import useSWR from "swr";
 import Footer from "../../components/Shared/Footer/Footer";
+import Head from "next/head";
 
 async function fetcher(url) {
   const res = await fetch(url);
@@ -21,6 +22,11 @@ export default function IdPage(props) {
     fetcher
   );
   // console.log(data);
+  // console.log(
+  //   data?.map((list) => {
+  //     return { list };
+  //   })
+  // );
   const backButton = () => {
     history.back();
   };
@@ -28,6 +34,15 @@ export default function IdPage(props) {
 
   return (
     <>
+      <Head>
+        {!data ? (
+          <title>Daycare Indonesia - News</title>
+        ) : (
+          data.map((list, key) => {
+            return <title key={key}>Detail - {list.name}</title>;
+          })
+        )}
+      </Head>
       <Header></Header>
       <div className={styles.wrap}>
         <Container>

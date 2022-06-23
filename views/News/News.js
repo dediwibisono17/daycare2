@@ -5,6 +5,7 @@ import { Container, Grid, Skeleton } from "@mui/material";
 import CardUI from "../../components/UI/CardUI/CardUI";
 import ButtonUI from "../../components/UI/ButtonUI/ButtonUI";
 import { Send } from "@mui/icons-material";
+import Head from "next/head";
 
 async function fetcher(url) {
   const res = await fetch(url);
@@ -19,6 +20,9 @@ const News = (props) => {
   // console.log(data);
   return (
     <>
+      <Head>
+        <title>Daycare Indonesia - News</title>I
+      </Head>
       <Container>
         <div className={styles.newsall}>
           <h1 className="text-center">Semua Berita</h1>

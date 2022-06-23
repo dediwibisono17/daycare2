@@ -3,6 +3,7 @@ import useSWR from "swr";
 import Header from "../../components/Shared/Header/Header";
 import { Container, Grid, Skeleton } from "@mui/material";
 import Footer from "../../components/Shared/Footer/Footer";
+import Head from "next/head";
 
 async function fetcher(url) {
   const res = await fetch(url);
@@ -17,6 +18,9 @@ const Gallery = (props) => {
 
   return (
     <>
+      <Head>
+        <title>Daycare Indonesia - Gallery</title>
+      </Head>
       <Header></Header>
       <Container>
         <div className={styles.wrap}>
