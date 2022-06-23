@@ -8,11 +8,8 @@ export default function Home() {
   return (
     <>
       <Header></Header>
-      
-        <h1>Homepage</h1>
-        <Homepage></Homepage>
-        <ButtonUI>Test</ButtonUI>
+      <Homepage></Homepage>
       <Footer></Footer>
     </>
-  )
+  );
 }
