@@ -12,20 +12,24 @@ const data = [
 
 const sosmed = [
   {
-    name: "Facebook",
+    name: "Daycare Indonesia",
     icon: FacebookIcon,
+    color: "#3b5998",
   },
   {
-    name: "Instagram",
+    name: "Daycare Indonesia",
     icon: InstagramIcon,
+    color: "#8a3ab9",
   },
   {
-    name: "Twitter",
+    name: "@daycareindonesia",
     icon: TwitterIcon,
+    color: "#00acee",
   },
   {
-    name: "Maps",
+    name: "Depok, Jawa Barat",
     icon: AddLocationAltIcon,
+    color: "#1EA362",
   },
 ];
 

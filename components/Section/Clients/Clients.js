@@ -25,7 +25,7 @@ export default function Clients() {
           {/* {data.map((list, key) => {
             return <p key={key}>{list.name}</p>;
           })} */}
-          <Grid container spacing={2}>
+          <Grid container item spacing={2}>
             {data.map((list, key) => {
               //   console.log(list);
               return (

@@ -27,7 +27,7 @@ const AboutUsCard = (props) => {
   return (
     <>
       <Container>
-        <Grid container spacing={2}>
+        <Grid container item spacing={2}>
           <Grid item md={4} xs={12}>
             <CardUI>
               <div className={styles["card-news"]}>

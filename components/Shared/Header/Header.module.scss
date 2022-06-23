@@ -137,4 +137,26 @@
   padding: 8px 16px;
   margin: 24px 0 0;
   font-size: 28px;
+  color: #32355d;
+}
+
+.copy {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  color: #32355d;
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0 0 8px;
+  padding: 0;
+  li {
+    div {
+      display: inline-block;
+      vertical-align: super;
+      margin-left: 8px;
+      font-weight: bold;
+    }
+  }
 }

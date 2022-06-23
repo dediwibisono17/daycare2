@@ -6,7 +6,7 @@ const Usp = (props) => {
     <>
       <Container>
         <Box className={styles.mtop}>
-          <Grid container>
+          <Grid container item spacing={2} md={12}>
             <Grid md={4} className={styles.bold}>
               <div className={styles["usp"]}>
                 <div className={styles["usp__img"]}>

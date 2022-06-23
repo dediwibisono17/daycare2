@@ -1,9 +1,9 @@
 import styles from "./Header.module.scss";
-import { Container, Drawer } from "@mui/material";
+import { Container, Drawer, SvgIcon } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import data from "../../Shared/menu.js";
+import { sosmed } from "../../Shared/menu.js";
 import HeaderMenu from "./HeaderMenu";
 
 const Header = (props) => {
@@ -22,6 +22,7 @@ const Header = (props) => {
   const closeBar = () => {
     setIsDrawerOpen(false);
   };
+  // console.log(sosmed);
 
   return (
     <>
@@ -50,6 +51,22 @@ const Header = (props) => {
             <Drawer anchor="left" open={isDrawerOpen} onClose={closeBar}>
               <h2 className={styles.h2}>DayCare Indonesia</h2>
               <HeaderMenu variant={styles.mobile}></HeaderMenu>
+              <div className={styles.copy}>
+                <ul className={styles.ul}>
+                  {sosmed.map((listed, key) => {
+                    return (
+                      <li key={key}>
+                        <SvgIcon
+                          component={listed.icon}
+                          style={{ color: `${listed.color}` }}
+                        ></SvgIcon>
+                        <div>{listed.name}</div>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div>&copy; 2022 Daycare Indonesia</div>
+              </div>
             </Drawer>
 
             <div className={styles.isdesktop}>
