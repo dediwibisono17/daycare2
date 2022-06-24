@@ -21,17 +21,16 @@ export default function IdPage(props) {
     `https://jsonplaceholder.typicode.com/comments?id=${id}`,
     fetcher
   );
-  // console.log(data);
-  // console.log(
-  //   data?.map((list) => {
-  //     return { list };
-  //   })
-  // );
   const backButton = () => {
     history.back();
   };
-  const helpSlug = id?.split("-").join(" ").toUpperCase();
-
+  // const helpSlug = id?.split("-").join(" ").toUpperCase();
+  const meta = {
+    title: "Gallery | Daycare Indonesia",
+    desc: "Rumah Kedua Untuk Buah Hati Tercinta",
+    url: "https://daycare2.vercell.app",
+    shorttitle: "Daycare",
+  };
   return (
     <>
       <Head>

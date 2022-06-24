@@ -7,9 +7,7 @@ import Footer from "../components/Shared/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <Header></Header>
       <Homepage></Homepage>
-      <Footer></Footer>
     </>
   );
 }
