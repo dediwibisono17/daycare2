@@ -10,7 +10,6 @@ export default function newsPage() {
       <Header></Header>
       <div>news</div>
       <News></News>
-      <Footer></Footer>
     </>
   );
 }
