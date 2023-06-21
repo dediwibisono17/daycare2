@@ -45,7 +45,7 @@ const Berita = (props) => {
                 : data.articles.map((list, key) => {
                     return (
                     
-                      <Grid item md={4} key={key}>
+                      <Grid item md={4} key={key} className={styles.cardx}>
                          <div className={styles.img}>
                              <img
                                 src={list.urlToImage}
