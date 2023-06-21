@@ -56,6 +56,8 @@ const Berita = (props) => {
                          </div>
                         
                         {list.author}
+                        <br></br>
+                        <ButtonUI>Detail</ButtonUI>
                         
                       </Grid>
                     );
