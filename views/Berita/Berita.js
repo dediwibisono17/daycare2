@@ -30,7 +30,7 @@ const Berita = (props) => {
     return (
         <>
             <Shared meta={meta}>
-                <Header></Header>
+                <Container>
                 <h1 className={styles.titles}>Ini Berita</h1>
                 <Grid container spacing={2}>
               {!data
@@ -44,13 +44,24 @@ const Berita = (props) => {
                   })
                 : data.articles.map((list, key) => {
                     return (
+                    
                       <Grid item md={4} key={key}>
+                         <div className={styles.img}>
+                             <img
+                                src={list.urlToImage}
+                                alt={list.title}
+                                title={list.title}
+                                loading="lazy"
+                              />
+                         </div>
+                        
                         {list.author}
                         
                       </Grid>
                     );
                   })}
             </Grid>
+            </Container>
             </Shared>
         </>
     )
