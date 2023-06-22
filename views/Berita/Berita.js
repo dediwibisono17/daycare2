@@ -11,27 +11,77 @@ import Header from "../../components/Shared/Header/Header";
 
 
 async function fetcher(url) {
-    const res = await fetch(url);
-    const json = await res.json();
-    return json;
+  const res = await fetch(url);
+  const json = await res.json();
+  return json;
 }
 const Berita = (props) => {
-    const API = "https://newsapi.org/v2/everything?q=apple&from=2023-06-20&to=2023-06-20&sortBy=popularity&pageSize=10&apiKey=e407016d005947cf9b06e78d27b314cf";
+  const API = "https://newsapi.org/v2/everything?q=apple&from=2023-06-20&to=2023-06-20&sortBy=popularity&pageSize=10&apiKey=e407016d005947cf9b06e78d27b314cf";
 
-    const { data, error } = useSWR(API, fetcher);
-      console.log(data.articles[0]);
+  const { data, error } = useSWR(API, fetcher);
+  console.log(data.articles[0]);
 
-    const meta = {
-        title: "Berita | Daycare Indonesia",
-        desc: "Rumah Kedua Untuk Buah Hati Tercinta",
-        url: "https://daycare2.vercell.app",
-        shorttitle: "Daycare",
-    };
-    return (
-        <>
-           
-        </>
-    )
+  const meta = {
+    title: "Berita | Daycare Indonesia",
+    desc: "Rumah Kedua Untuk Buah Hati Tercinta",
+    url: "https://daycare2.vercell.app",
+    shorttitle: "Daycare",
+  };
+  return (
+    <>
+      <Shared meta={meta}>
+        <Container>
+          <h1 className={styles.titles}>Ini Berita</h1>
+          <Grid container spacing={2}>
+            {!data
+              ? [1, 2, 3, 4, 5, 6].map((data) => {
+                // key pake data untuk looping
+                return (
+                  <Grid item md={4} key={data}>
+                    <Skeleton variant="rectangular" height={200} />
+                  </Grid>
+                );
+              })
+              : data.articles.map((list, key) => {
+                const id_ = key;
+                const linked = "/berita/";
+                const linked_link = list[id_];
+                return (
+
+
+
+
+
+
+
+                  <Grid item md={4} key={key} className={styles.cardx}>
+
+                    <div className={styles.img}>
+                      <img
+                        src={list.urlToImage}
+                        alt={list.title}
+                        title={list.title}
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {list.title}
+                    <p>
+                      {list.description}
+                    </p>
+                    <br></br>
+
+                    <ButtonUI>Detail</ButtonUI>
+
+
+                  </Grid>
+                );
+              })}
+          </Grid>
+        </Container>
+      </Shared>
+    </>
+  )
 }
 
 export default Berita;
