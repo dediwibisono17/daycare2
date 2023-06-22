@@ -16,10 +16,10 @@ async function fetcher(url) {
     return json;
 }
 const Berita = (props) => {
-    const API = "https://newsapi.org/v2/everything?q=apple&from=2023-06-20&to=2023-06-20&sortBy=popularity&apiKey=e407016d005947cf9b06e78d27b314cf";
+    const API = "https://newsapi.org/v2/everything?q=apple&from=2023-06-20&to=2023-06-20&sortBy=popularity&pageSize=10&apiKey=e407016d005947cf9b06e78d27b314cf";
 
     const { data, error } = useSWR(API, fetcher);
-    //   console.log(data.articles[0]);
+      console.log(data.articles[0]);
 
     const meta = {
         title: "Berita | Daycare Indonesia",
@@ -29,42 +29,7 @@ const Berita = (props) => {
     };
     return (
         <>
-            <Shared meta={meta}>
-                <Container>
-                <h1 className={styles.titles}>Ini Berita</h1>
-                <Grid container spacing={2}>
-              {!data
-                ? [1, 2, 3, 4, 5, 6].map((data) => {
-                    // key pake data untuk looping
-                    return (
-                      <Grid item md={4} key={data}>
-                        <Skeleton variant="rectangular" height={200} />
-                      </Grid>
-                    );
-                  })
-                : data.articles.map((list, key) => {
-                    return (
-                    
-                      <Grid item md={4} key={key} className={styles.cardx}>
-                         <div className={styles.img}>
-                             <img
-                                src={list.urlToImage}
-                                alt={list.title}
-                                title={list.title}
-                                loading="lazy"
-                              />
-                         </div>
-                        
-                        {list.author}
-                        <br></br>
-                        <ButtonUI>Detail</ButtonUI>
-                        
-                      </Grid>
-                    );
-                  })}
-            </Grid>
-            </Container>
-            </Shared>
+           
         </>
     )
 }
